@@ -59,7 +59,6 @@ fn get_common_chars(str1: &str, str2: &str) -> Option<String> {
 }
 
 fn get_input_lines() -> Vec<String> {
-    let contents = fs::read_to_string("src/input.in")
-        .expect("Something went wrong reading the file");
+    let contents = fs::read_to_string("src/input.in").unwrap();
     contents.lines().map( |x| x.to_string() ).collect()
 }

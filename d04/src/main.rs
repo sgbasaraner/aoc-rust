@@ -159,8 +159,7 @@ fn part_two(sessions: Vec<Session>) -> i32 {
 }
 
 fn parse_input_to_sessions() -> Vec<Session> {
-    let contents = fs::read_to_string("src/input.in")
-        .expect("Something went wrong reading the file");
+    let contents = fs::read_to_string("src/input.in").unwrap();
     let lines = contents.lines().map(|s| s.to_string()).collect();
     organize_sessions(organize_logs_chronologically(lines))
 }

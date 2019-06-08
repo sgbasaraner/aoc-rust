@@ -26,8 +26,7 @@ fn part_two(nums: Vec<i32>) -> i32 {
 }
 
 fn get_input_lines() -> Vec<i32> {
-    let contents = fs::read_to_string("src/input.in")
-        .expect("Something went wrong reading the file");
+    let contents = fs::read_to_string("src/input.in").unwrap();
     contents.lines().map({
         |x| x.replace("+", "").parse::<i32>().unwrap() })
     .collect()

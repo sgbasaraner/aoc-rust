@@ -84,7 +84,6 @@ fn part_two(claims: &Vec<Claim>) -> String {
 }
 
 fn get_input_claims() -> Vec<Claim> {
-    let contents = fs::read_to_string("src/input.in")
-        .expect("Something went wrong reading the file");
+    let contents = fs::read_to_string("src/input.in").unwrap();
     contents.lines().map( |x| Claim::using_string(x.to_string()) ).collect()
 }
